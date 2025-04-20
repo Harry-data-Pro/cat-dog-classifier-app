@@ -8,7 +8,7 @@ import os
 
 # Download model from Hugging Face if not already present
 model_path = 'cat_dog_model.keras'
-hf_url = 'https://huggingface.co/harry-data-Pro/catdogclassifierapp/resolve/main/cat_dog_model_partial_2nd_try.keras'
+hf_url = 'https://huggingface.co/harry-data-Pro/catdogclassifierapp/resolve/main/cat_dog_model_legacy.keras'
 
 if not os.path.exists(model_path):
     with st.spinner("📦 Downloading model from Hugging Face..."):
@@ -41,3 +41,5 @@ if uploaded_file is not None:
     confidence = prediction if prediction > 0.5 else 1 - prediction
 
     st.write(f"### 🧠 I think it's a **{predicted_class}** ({confidence:.2%} confidence)")
+
+from tensorflow.keras.models import load_mode
