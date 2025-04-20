@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from tensorflow.keras.models import load_model
+import keras
 from tensorflow.keras.preprocessing import image
 from PIL import Image
 import requests
@@ -17,7 +17,7 @@ if not os.path.exists(model_path):
             f.write(r.content)
 
 # Load model
-model = load_model(model_path)
+model = keras.saving.load_model(model_path)
 class_names = ['Cat', 'Dog']
 
 # Streamlit UI
