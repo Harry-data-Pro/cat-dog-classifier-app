@@ -4,3 +4,4 @@ tensorflow
 scipy
 tqdm
 Pillow
+gdown
