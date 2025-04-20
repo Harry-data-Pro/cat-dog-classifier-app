@@ -17,7 +17,7 @@ if not os.path.exists(model_path):
             f.write(r.content)
 
 # Load model
-model = load_model(model_path)  # ✅ correct for TF 2.12 + legacy format
+model = load_model(model_path)  # ✅ correct for TF 2.12 + legadcy format
 class_names = ['Cat', 'Dog']
 
 # Streamlit UI
