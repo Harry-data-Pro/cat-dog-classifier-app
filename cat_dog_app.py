@@ -5,6 +5,9 @@ from tensorflow.keras.preprocessing import image
 from PIL import Image
 import requests
 import os
+from keras.models import load_model
+
+
 
 # Download model from Hugging Face if not already present
 model_path = 'cat_dog_model.keras'
@@ -17,7 +20,7 @@ if not os.path.exists(model_path):
             f.write(r.content)
 
 # Load model
-model = load_model(model_path)  # ✅ correct for TF 2.12 + legadcy format
+model = load_model("cat_dog_model_native.keras")
 class_names = ['Cat', 'Dog']
 
 # Streamlit UI
@@ -42,4 +45,4 @@ if uploaded_file is not None:
 
     st.write(f"### 🧠 I think it's a **{predicted_class}** ({confidence:.2%} confidence)")
 
-from tensorflow.keras.models import load_mode
+
