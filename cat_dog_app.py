@@ -8,7 +8,7 @@ import os
 
 # Download model from Hugging Face if not already present
 model_path = 'cat_dog_model.keras'
-hf_url = 'https://huggingface.co/harry-data-Pro/catdogclassifierapp/resolve/main/cat_dog_model_revised.keras'
+hf_url = 'https://huggingface.co/harry-data-Pro/catdogclassifierapp/resolve/main/cat_dog_model_native.keras'
 
 if not os.path.exists(model_path):
     with st.spinner("📦 Downloading model from Hugging Face..."):
