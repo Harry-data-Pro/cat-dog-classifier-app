@@ -6,3 +6,4 @@ tqdm
 Pillow
 gdown
 streamlit
+requests
