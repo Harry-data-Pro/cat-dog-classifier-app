@@ -10,7 +10,7 @@ from keras.models import load_model
 
 
 # Download model from Hugging Face if not already present
-model_path = 'cat_dog_model.keras'
+model_path = 'cat_dog_model_native.keras'
 hf_url = 'https://huggingface.co/harry-data-Pro/catdogclassifierapp/resolve/main/cat_dog_model_native.keras'
 
 if not os.path.exists(model_path):
