@@ -6,14 +6,21 @@ from PIL import Image
 import gdown
 import os
 
-# Define model path and download URL from Google Drive
 model_path = 'cat_dog_model.keras'
 file_id = '1VFpxMGIIKtcEjyc6JcFFEbYSV8Q9YxY4'
 url = f'https://drive.google.com/uc?id={file_id}'
-# Download the model if not already present
+
+# Download with fuzzy handling
 if not os.path.exists(model_path):
     with st.spinner("📦 Downloading model..."):
-        gdown.download(url, model_path, quiet=False)
+        gdown.download(url, model_path, quiet=False, fuzzy=True)
+
+# Check model file size before loading
+if not os.path.exists(model_path) or os.path.getsize(model_path) < 100000:
+    st.error("🚫 Model download failed or is incomplete. Please check the link.")
+else:
+    model = load_model(model_path)
+
 
 # Load the model
 model = load_model(model_path)
