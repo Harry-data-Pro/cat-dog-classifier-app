@@ -6,6 +6,7 @@ git remote add origin https://github.com/Harry-data-Pro/cat-dog-classifier-app.g
 git push -u origin main
 git add packages.txt requirements.txt
 git add cat_dog_app.py
-git commit -m "Fix model deserialization using legacy loader"
+git commit -m "Load legacy Keras model format"
 git push
+
 
