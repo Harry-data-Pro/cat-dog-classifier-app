@@ -8,9 +8,9 @@ import gdown
 import os
 
 # Define model path and download URL from Google Drive
-model_path = 'cat_dog_model.keras'
-file_id = '1VFpxMGIIKtcEjyc6JcFFEbYSV8Q9YxY4'
-url = f'https://drive.google.com/uc?id={file_id}'
+
+model_path = 'cat_dog_model_partial_2nd_try.keras'
+hf_url = 'https://huggingface.co/harry-data-Pro/catdogclassifierapp/resolve/main/cat_dog_model_partial_2nd_try.keras'
 
 # Custom InputLayer to handle batch_shape compatibility
 def custom_input_layer(*args, **kwargs):
